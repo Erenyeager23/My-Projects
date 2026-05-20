@@ -21,5 +21,8 @@ public class Main{
         z1.food();
         z1.payment();
 
+        singleton log1=singleton.getlogger();
+        singleton log2=singleton.getlogger();
+        System.out.println("Is both logs are same? Answer is "+(log1==log2));
     }
 }
