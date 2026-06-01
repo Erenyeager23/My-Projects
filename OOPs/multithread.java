@@ -131,3 +131,18 @@ class Main {
         user4.start();
     }
 }
+
+/*
+concept of multithreading in Java is a powerful feature that allows multiple threads to run concurrently, enabling efficient utilization of resources and improved performance. In the provided code, we have a BankAccount class that simulates a bank account with methods for withdrawing, depositing, 
+and checking the balance. The Customer class implements the Runnable interface and represents a customer performing various operations on the bank account. In the main method, we create a BankAccount instance with an initial balance of ₹10,000
+and multiple threads representing different customers performing operations like withdrawing, depositing, and checking the balance. The synchronized keyword is used to ensure that only one thread can access the critical sections of code that modify the account balance at a time, preventing
+race conditions and ensuring thread safety. This example demonstrates how multithreading can be used to simulate real-world scenarios, such as banking transactions, while maintaining data integrity and consistency.
+
+explanation of the code:
+1. BankAccount Class: This class represents a bank account with a balance. It has methods for withdrawing, depositing, and checking the balance. The withdraw and deposit methods are synchronized to ensure that only one thread can access them at a time, preventing
+race conditions and ensuring thread safety.
+2. Customer Class: This class implements the Runnable interface and represents a customer performing operations on the bank account. It has a constructor that takes a BankAccount instance, an operation type (withdraw, deposit, or balance), and an amount for withdrawal or deposit.
+3. Main Class: In the main method, we create a BankAccount instance with an initial balance of ₹10,000. We then create multiple threads representing different customers performing various operations on the bank account. Each thread is started to execute the run method of the Customer class, which performs the specified operation on the bank account.
+
+
+ */
