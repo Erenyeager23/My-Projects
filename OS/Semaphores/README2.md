@@ -1,4 +1,3 @@
-Here is the next section of your OS architecture documentation, covering **Process Synchronization and Concurrency Control**.
 
 ---
 
