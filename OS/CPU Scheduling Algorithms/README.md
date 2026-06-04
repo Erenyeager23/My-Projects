@@ -574,3 +574,88 @@ Actually transfers CPU control to that process.
 * Starvation can occur in SJF and Priority Scheduling.
 * Aging is used to prevent starvation.
 * Scheduling is essential for multitasking operating systems.
+
+
+Here is a detailed breakdown of CPU scheduling algorithms, focusing on the Multi-Level Feedback Queue (MLFQ), Round Robin time-slice tradeoffs, and the production scheduling architectures of Windows and Linux.
+
+---
+
+## 1. Multi-Level Feedback Queue (MLFQ)
+
+### How It Works
+
+The **Multi-Level Feedback Queue (MLFQ)** is an adaptive CPU scheduling algorithm designed to optimize process throughput and response time without requiring prior knowledge of a process's execution length.
+
+It divides the ready queue into a hierarchy of distinct sub-queues (e.g., $Q_0, Q_1, \dots, Q_n$), each with different priority levels and scheduling configurations.
+
+```
+       [ High Priority ] ──>  Q0  (Time Quantum = 4ms)  ───┐ (Preempted / Demoted)
+                              │                            │
+       [ Med Priority ]  ──>  Q1  (Time Quantum = 8ms)  <──┘
+                              │                            │ (Preempted / Demoted)
+       [ Low Priority ]  ──>  Q2  (FCFS / Long Quantum) <──┘
+
+```
+
+The algorithm operates on five core rules (originally formalized by Arpaci-Dusseau):
+
+1. **Rule 1:** If $\text{Priority}(A) > \text{Priority}(B)$, process $A$ runs, and $B$ does not.
+2. **Rule 2:** If $\text{Priority}(A) = \text{Priority}(B)$, they run in Round Robin (RR) fashion using the time quantum of that specific queue.
+3. **Rule 3:** When a process enters the system for the first time, it is placed at the highest priority queue ($Q_0$).
+4. **Rule 4 (Feedback):** * **Rule 4a:** If a process uses up its entire time allotment in a single stretch, its priority is **demoted** (shifted down one queue).
+* **Rule 4b:** If a process yields the CPU before its time slice is up (e.g., to perform I/O), it **stays** at the same priority level.
+
+
+5. **Rule 5 (Boosting):** After some fixed time period $S$, move all the processes in the system to the topmost queue ($Q_0$).
+
+### How MLFQ Prevents Starvation
+
+Because long-running, CPU-bound tasks are continuously demoted to the lowest-priority queues, they risk being starved if a continuous stream of short interactive jobs enters the system.
+
+MLFQ prevents this via **Rule 5 (Periodic Priority Boosting)**. By periodically resetting all processes to the top queue, long-running processes are guaranteed to receive a share of the CPU. Furthermore, if a CPU-bound process has changed its behavior to become interactive, the boost allows the algorithm to re-evaluate it.
+
+---
+
+## 2. Round Robin (RR) & Time Quantum Selection
+
+The efficiency of a Round Robin scheduler depends heavily on the size of its **Time Quantum ($q$)**—the maximum continuous time a process can execute before being preempted.
+
+### Scenario A: Time Quantum is Too Large ($q \rightarrow \infty$)
+
+* **What happens:** If the time quantum is larger than the longest process burst time, the algorithm degrades into **First-Come, First-Served (FCFS)** scheduling.
+* **Trade-off:**
+* **Advantage:** Context-switching overhead drops to zero, maximizing raw CPU computation efficiency.
+* **Disadvantage:** Response times suffer drastically. Short interactive processes are forced to wait in the ready queue behind long, compute-heavy jobs, degrading user experience.
+
+
+
+### Scenario B: Time Quantum is Too Small ($q \rightarrow 0$)
+
+* **What happens:** The system approaches an ideal mechanism called **Processor Sharing**, where $N$ processes appear to run simultaneously on the hardware, each at $1/N$-th of the total CPU speed.
+* **Trade-off:**
+* **Advantage:** Excellent response time. Interactive applications feel highly performant because every process gets a turn almost instantly.
+* **Disadvantage:** Massive **Context-Switching Overhead**. If a context switch takes $1 \text{ ms}$ and the time quantum is set to $1 \text{ ms}$, the CPU spends 50% of its time executing OS management routines rather than user program instructions.
+
+
+
+---
+
+## 3. Real-World OS Schedulers: Windows vs. Linux
+
+Modern commercial operating systems do not use pure textbooks designs like FCFS or pure Round Robin; instead, they implement highly sophisticated hybrid scheduling models.
+
+### Windows Scheduling Architecture
+
+* **What it uses:** Windows uses a **Multilevel Feedback Queue based on priority levels** (32 distinct priority levels divided into Real-Time, Variable, and Idle classes). It is a preemptive, priority-driven scheduler.
+* **Why:** Windows is heavily optimized for **Client-Desktop and User-Interface Responsiveness**.
+* It employs a technique called **Priority Boosting**. When a user clicks on a window, brings an application to the foreground, or when an application wakes up from an I/O wait, the Windows kernel temporarily boosts that thread's priority and extends its time quantum.
+* This guarantees that desktop interactions (mouse moves, window dragging, typing) remain fluid and lag-free, even under heavy background workloads.
+
+
+
+### Linux Scheduling Architecture
+
+* **What it uses:** Modern Linux uses a design based on the **Completely Fair Scheduler (CFS)** or its modern successor, the **EEVDF (Earliest Eligible Virtual Deadline First)** scheduler.
+* **Why:** Linux is designed to scale dynamically from mobile devices to massive enterprise clouds and supercomputer clusters.
+* **How CFS works:** Instead of utilizing traditional fixed priority queues, CFS uses a time-ordered **Red-Black Tree** to track execution metrics. It assigns a `vruntime` (virtual runtime) variable to every process, tracking exactly how much time that process has spent executing on a CPU core. The scheduler always selects the node in the tree with the absolute smallest `vruntime` to execute next.
+* **The Rationale:** CFS guarantees perfect proportional fairness. Instead of managing complex rules for shifting tasks across discrete queues, it scales execution dynamically. If there are $N$ processes, each is guaranteed approximately $1/N$ of the CPU power. Priorities are adjusted via a metric called **Nice Values**, which scale the weight of a process’s `vruntime` accumulation (high-priority processes accumulate virtual execution time slower, allowing them to remain on the execution cores longer).
