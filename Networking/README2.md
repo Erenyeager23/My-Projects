@@ -47,16 +47,13 @@ Imagine a modern office with 50 employees.
 
 Computer networks are categorized based on their geographic size, ownership, and data transfer speeds. The three primary types are:
 
-* 
-**LAN (Local Area Network):** A highly localized network connecting devices within a short distance.
+* **LAN (Local Area Network):** A highly localized network connecting devices within a short distance.
 
 
-* 
-**MAN (Metropolitan Area Network):** A larger network that spans an entire town, city, or large campus.
+* **MAN (Metropolitan Area Network):** A larger network that spans an entire town, city, or large campus.
 
 
-* 
-**WAN (Wide Area Network):** A massive network that connects geographically dispersed regions, countries, or even continents.
+* **WAN (Wide Area Network):** A massive network that connects geographically dispersed regions, countries, or even continents.
 
 
 
@@ -64,23 +61,13 @@ Computer networks are categorized based on their geographic size, ownership, and
 
 ### Comparison at a Glance
 
-| Feature | LAN (Local Area Network) 
-
- | MAN (Metropolitan Area Network) 
-
- | WAN (Wide Area Network) 
-
- |
+| Feature | LAN (Local Area Network) | MAN (Metropolitan Area Network) | WAN (Wide Area Network) |
 | --- | --- | --- | --- |
 | **Geographic Span** | Small (a few meters to a single building) | Medium (a town, city, or large campus) | Large (countries, continents, or global) |
 | **Data Speed** | Extremely high (typically 1 Gbps to 100 Gbps+) | Moderate to High (typically 100 Mbps to 1 Gbps) | Lower to Moderate (highly variable across long distances) |
 | **Ownership** | Private (owned by a person or a single organization) | Private or Public (owned by a consortium or telecom provider) | Public or Shared (owned by collective telecom giants and providers) |
 | **Error Rates** | Very low (shielded or short-run cables) | Moderate | High (due to data traveling through vast infrastructures) |
-| **Example** | Your home Wi-Fi network 
-
- | A city-wide cable TV or free municipal public Wi-Fi network | The global Internet 
-
- |
+| **Example** | Your home Wi-Fi network | A city-wide cable TV or free municipal public Wi-Fi network | The global Internet |
 
 ---
 
@@ -88,16 +75,13 @@ Computer networks are categorized based on their geographic size, ownership, and
 
 LAN (Local Area Network) 
 
-* 
-**Why:** To securely and rapidly share resources like files, local servers, and hardware devices among users in the exact same physical space.
+* **Why:** To securely and rapidly share resources like files, local servers, and hardware devices among users in the exact same physical space.
 
 
-* 
-**How:** Devices connect directly via Ethernet cables or wirelessly via Wi-Fi to a central switch or router.
+* **How:** Devices connect directly via Ethernet cables or wirelessly via Wi-Fi to a central switch or router.
 
 
-* 
-**Where:** Homes, office buildings, schools, and small retail shops.
+* **Where:** Homes, office buildings, schools, and small retail shops.
 
 
 
@@ -109,13 +93,12 @@ MAN (Metropolitan Area Network)
 
 WAN (Wide Area Network) 
 
-* 
-**Why:** To facilitate long-distance communication across borders, enabling global commerce, communication, and web access.
+* **Why:** To facilitate long-distance communication across borders, enabling global commerce, communication, and web access.
 
 
 * **How:** Connects multiple LANs together using long-haul transmission technologies, communication satellites, undersea fiber-optic cables, and public telecommunication networks.
-* 
-**Where:** Multi-national corporation networks, internet service providers linking cities together, and the Internet itself.
+
+* **Where:** Multi-national corporation networks, internet service providers linking cities together, and the Internet itself.
 
 
 
@@ -125,8 +108,7 @@ WAN (Wide Area Network)
 
 Let's look at a major global banking corporation:
 
-* 
-**The LAN:** Inside the bank's headquarters building in New York, the computers of the HR, accounting, and security teams are linked together to share local databases and local network tools.
+* **The LAN:** Inside the bank's headquarters building in New York, the computers of the HR, accounting, and security teams are linked together to share local databases and local network tools.
 
 
 * **The MAN:** The bank interconnects its headquarters building with its 12 local retail branches spread all across New York City using a dedicated high-speed fiber ring.
@@ -225,8 +207,7 @@ When you want to access information online or send data to another device:
 
 ### Where It Is Used
 
-* 
-**Public Internet:** Web servers hosting websites (like Google or Netflix) must have a public IP address so your web browser can locate them.
+* **Public Internet:** Web servers hosting websites (like Google or Netflix) must have a public IP address so your web browser can locate them.
 
 
 * **Local Private Networks:** Your home router assigns a private IP address to your smartphone, laptop, and smart TV so they can communicate with each other locally and share an internet connection safely.
@@ -256,36 +237,14 @@ Every device on a network relies on two entirely distinct types of addresses to 
 
 ### Comparison at a Glance
 
-| Feature | IP Address 
-
- | MAC Address 
-
- |
+| Feature | IP Address | MAC Address |
 | --- | --- | --- |
-| **Type** | Logical / Software-assigned 
-
- | Physical / Hardware-assigned |
-| **Layer (OSI Model)** | Layer 3 (Network Layer) 
-
- | Layer 2 (Data Link Layer) 
-
- |
-| **Permanence** | Dynamic (changes with location) 
-
- | Permanent (unchanging static ID) |
-| **Format** | <br>`192.168.1.1` (IPv4) or hexadecimal (IPv6) 
-
- | `00:1A:2B:3C:4D:5E` (6 pairs of hex digits) |
-| **Scope** | Global or Network-wide routing 
-
- | Local link communication only 
-
- |
-| **Main Device** | Interpreted by Routers 
-
- | Interpreted by Switches 
-
- |
+| **Type** | Logical / Software-assigned | Physical / Hardware-assigned |
+| **Layer (OSI Model)** | Layer 3 (Network Layer) | Layer 2 (Data Link Layer) |
+| **Permanence** | Dynamic (changes with location) | Permanent (unchanging static ID) |
+| **Format** | <br>`192.168.1.1` (IPv4) or hexadecimal (IPv6) | `00:1A:2B:3C:4D:5E` (6 pairs of hex digits) |
+| **Scope** | Global or Network-wide routing | Local link communication only |
+| **Main Device** | Interpreted by Routers | Interpreted by Switches |
 
 ---
 
@@ -307,8 +266,7 @@ A network needs both addresses to function because they solve two different prob
 ### Where It Is Used
 
 * **MAC Addresses** are used by your home Wi-Fi router to make sure a video stream goes directly to your laptop's wireless card and not your sibling's iPad sitting right next to you.
-* 
-**IP Addresses** are used by the broader Internet infrastructure to move that video stream across oceans and continents from a remote server to your home city.
+* **IP Addresses** are used by the broader Internet infrastructure to move that video stream across oceans and continents from a remote server to your home city.
 
 
 
@@ -341,8 +299,7 @@ Without a router, your devices would be locked inside a local island. They could
 
 A router performs several vital roles simultaneously:
 
-1. 
-**Routing and Path Determination:** It analyzes the Destination IP address inside incoming packets and checks its **Routing Table** to find the absolute fastest, most efficient path to send that packet forward.
+1. **Routing and Path Determination:** It analyzes the Destination IP address inside incoming packets and checks its **Routing Table** to find the absolute fastest, most efficient path to send that packet forward.
 
 
 2. **Network Address Translation (NAT):** Your ISP typically provides you with just *one* public IP address. The router translates your internal devices' private IP addresses into that single public IP address so multiple gadgets can share one Internet connection safely.
@@ -355,8 +312,7 @@ A router performs several vital roles simultaneously:
 ### Where It Is Used
 
 * **At Home:** A combination box (which includes a router, switch, and wireless access point all-in-one) that delivers Wi-Fi to your phone, TV, and computer.
-* 
-**In Corporate Offices:** Dedicated, heavy-duty hardware appliances mounted inside IT server racks that safely route massive volumes of enterprise data to data centers or multi-branch locations.
+* **In Corporate Offices:** Dedicated, heavy-duty hardware appliances mounted inside IT server racks that safely route massive volumes of enterprise data to data centers or multi-branch locations.
 
 
 
@@ -425,8 +381,7 @@ Imagine ordering a meal from a restaurant over the phone:
 
 * **DNS:** You don’t know the restaurant's phone number by heart, so you look up *"Joe's Pizza"* in a directory to get the number `555-0199`.
 * **Handshake:** You dial the number. Someone picks up and says *"Hello?"* (SYN). You say *"Hi, I'd like to order"* (SYN-ACK). They reply *"Sure, go ahead"* (ACK). The line is now open.
-* 
-**Request:** You say, *"Send me a large pepperoni pizza."* * **Response:** The kitchen prepares it, a delivery driver takes it through the city streets (routing), and it arrives at your door so you can open the box and eat.
+* **Request:** You say, *"Send me a large pepperoni pizza."* * **Response:** The kitchen prepares it, a delivery driver takes it through the city streets (routing), and it arrives at your door so you can open the box and eat.
 
 
 
@@ -449,13 +404,10 @@ Just like a traditional phonebook maps a person's name (*"John Doe"*) to their p
 
 When you type a web link into a device, a background architecture swings into motion behind the scenes across a global network of specialized DNS servers:
 
-1. 
-**The Query:** Your device checks its internal storage (cache). If it doesn't know the address, it sends a query out to a local DNS Resolver (usually managed by your Internet Service Provider).
-
+1. **The Query:** Your device checks its internal storage (cache). If it doesn't know the address, it sends a query out to a local DNS Resolver (usually managed by your Internet Service Provider).
 
 2. **The Search:** The Resolver queries a distributed tree of directory servers (Root servers, TLD servers, and Authoritative servers) until it finds the matching IP match.
-3. 
-**The Connection:** The address is sent back to your browser, which instantly establishes a connection to that specific machine over the Internet.
+3. **The Connection:** The address is sent back to your browser, which instantly establishes a connection to that specific machine over the Internet.
 
 
 
@@ -479,8 +431,7 @@ The **DNS resolution process** is the step-by-step lookup sequence that a DNS re
 
 ### The Four Key Players
 
-1. 
-**DNS Recursor (Resolver):** The librarian server (usually managed by your ISP or a public provider like Google `8.8.8.8`) that receives your initial request and goes hunting for the answer.
+1. **DNS Recursor (Resolver):** The librarian server (usually managed by your ISP or a public provider like Google `8.8.8.8`) that receives your initial request and goes hunting for the answer.
 
 
 2. **Root Nameserver:** The first stop in the master lookup tree. It doesn't know the IP, but it knows exactly which directory handles the top-level domain (like `.com`, `.org`, `.net`).
@@ -493,8 +444,7 @@ The **DNS resolution process** is the step-by-step lookup sequence that a DNS re
 
 Whenever you request a domain name that isn't already stored in your device's local cache, the sequence unfolds as follows:
 
-1. 
-**Client to Recursor:** Your browser asks the DNS Recursor: *"What is the IP address of `google.com`?"* 
+1. **Client to Recursor:** Your browser asks the DNS Recursor: *"What is the IP address of `google.com`?"* 
 
 
 2. **Recursor to Root:** The Recursor checks its cache. If missing, it queries a Root Nameserver. The Root responds: *"I don't know, but go talk to the `.com` TLD server at this address."*
@@ -502,14 +452,10 @@ Whenever you request a domain name that isn't already stored in your device's lo
 4. **Recursor to Authoritative:** The Recursor queries the Authoritative Nameserver. This server returns the exact IP address (e.g., `142.250.190.46`).
 
 
-5. 
-**Recursor to Client:** The Recursor delivers the IP address back to your browser  and saves a copy locally (caches it) for next time.
+5. **Recursor to Client:** The Recursor delivers the IP address back to your browser  and saves a copy locally (caches it) for next time.
 
 
-6. 
-**Browser Connects:** The browser opens a connection directly to the server using that target IP.
-
-
+6. **Browser Connects:** The browser opens a connection directly to the server using that target IP.
 
 ---
 
@@ -645,45 +591,37 @@ Instead of seven layers, the TCP/IP model compresses network workflows into **fo
 
 #### 1. Application Layer
 
-* 
-**The Function:** Combines the responsibilities of OSI Layers 5, 6, and 7. It handles the user interface, high-level protocols, data formatting, encryption, and session state control directly.
+* **The Function:** Combines the responsibilities of OSI Layers 5, 6, and 7. It handles the user interface, high-level protocols, data formatting, encryption, and session state control directly.
 
 
-* 
-**Protocols:** HTTP, HTTPS, SSH, FTP, DNS, DHCP.
+* **Protocols:** HTTP, HTTPS, SSH, FTP, DNS, DHCP.
 
 
 
 #### 2. Transport Layer
 
-* 
-**The Function:** Identical to OSI Layer 4. It controls host-to-host data delivery, session multiplexing, error correction, and flow control.
+* **The Function:** Identical to OSI Layer 4. It controls host-to-host data delivery, session multiplexing, error correction, and flow control.
 
 
-* 
-**Protocols:** TCP, UDP.
+* **Protocols:** TCP, UDP.
 
 
 
 #### 3. Internet Layer
 
-* 
-**The Function:** Maps directly to OSI Layer 3 (Network Layer). Its core duty is to accept packets from the Transport layer and independent of the physical infrastructure, use logical addressing to route them across different networks.
+* **The Function:** Maps directly to OSI Layer 3 (Network Layer). Its core duty is to accept packets from the Transport layer and independent of the physical infrastructure, use logical addressing to route them across different networks.
 
 
-* 
-**Protocols:** IP (IPv4/IPv6), ICMP, ARP.
+* **Protocols:** IP (IPv4/IPv6), ICMP, ARP.
 
 
 
 #### 4. Network Access Layer (Link Layer)
 
-* 
-**The Function:** Merges OSI Layer 1 (Physical) and Layer 2 (Data Link). It manages how raw data frames are mapped to the hardware interface and physically transmitted across copper wires, optical fibers, or airwaves.
+* **The Function:** Merges OSI Layer 1 (Physical) and Layer 2 (Data Link). It manages how raw data frames are mapped to the hardware interface and physically transmitted across copper wires, optical fibers, or airwaves.
 
 
-* 
-**Protocols/Hardware:** Ethernet, Wi-Fi (802.11), PPP, Switches, physical cabling.
+* **Protocols/Hardware:** Ethernet, Wi-Fi (802.11), PPP, Switches, physical cabling.
 
 
 
@@ -693,35 +631,20 @@ Instead of seven layers, the TCP/IP model compresses network workflows into **fo
 
 | Feature | OSI Model | TCP/IP Model |
 | --- | --- | --- |
-| **Development** | Developed by ISO as a formal, theoretical standard.
-
- | Developed by the US DoD (ARPANET) as a practical implementation. |
-| **Number of Layers** | 7 rigid layers.
-
- | 4 flexible layers. |
+| **Development** | Developed by ISO as a formal, theoretical standard.| Developed by the US DoD (ARPANET) as a practical implementation. |
+| **Number of Layers** | 7 rigid layers.| 4 flexible layers. |
 | **Approach** | Standard-first (protocols came *after* the model). | Protocol-first (the model was built *around* existing protocols). |
-| **Session/Presentation** | Separated into unique Layer 5 and Layer 6 modules.
-
- | Combined directly into the Layer 4 Application layer.
-
- |
-| **Status** | Used primarily for textbook study and troubleshooting design.
-
- | The actual code base and operational design running the global internet.
-
- |
+| **Session/Presentation** | Separated into unique Layer 5 and Layer 6 modules.| Combined directly into the Layer 4 Application layer.|
+| **Status** | Used primarily for textbook study and troubleshooting design.| The actual code base and operational design running the global internet.|
 
 ---
 
 ### Why, How, and Where It Is Used
 
 * **Why:** We use TCP/IP because it focuses on performance and practical deployment. A simplified four-layer model reduces computing overhead in operating system kernels where software stacks are processed.
-* 
-**How:** When a software developer writes a program that talks to the web, they don't manually write code for seven layers; they rely on the operating system's built-in **TCP/IP stack**, passing high-level application data straight down to a network socket.
+* **How:** When a software developer writes a program that talks to the web, they don't manually write code for seven layers; they rely on the operating system's built-in **TCP/IP stack**, passing high-level application data straight down to a network socket.
 
-
-* 
-**Where:** It is implemented everywhere—inside the network card drivers of your smartphone, laptop, home router, and the high-end servers of cloud data centers.
+* **Where:** It is implemented everywhere—inside the network card drivers of your smartphone, laptop, home router, and the high-end servers of cloud data centers.
 
 
 
@@ -742,12 +665,10 @@ Think of building a product and shipping it out to a customer:
 
 Both **TCP (Transmission Control Protocol)** and **UDP (User Datagram Protocol)** are foundational Transport Layer protocols (Layer 4) used to pass data across a network. However, they handle data delivery with completely opposite design philosophies:
 
-* 
-**TCP** is a reliable, connection-oriented protocol that ensures every single packet arrives perfectly and in order.
+* **TCP** is a reliable, connection-oriented protocol that ensures every single packet arrives perfectly and in order.
 
 
-* 
-**UDP** is a lightweight, connectionless protocol designed for raw speed, sending data instantly without checking if it actually reaches the destination.
+* **UDP** is a lightweight, connectionless protocol designed for raw speed, sending data instantly without checking if it actually reaches the destination.
 
 
 
@@ -758,21 +679,11 @@ Both **TCP (Transmission Control Protocol)** and **UDP (User Datagram Protocol)*
 | Feature | TCP (Transmission Control Protocol) | UDP (User Datagram Protocol) |
 | --- | --- | --- |
 | **Connection Type** | Connection-oriented (Requires handshake) | Connectionless (Just throws data) |
-| **Reliability** | Guaranteed delivery (Retransmits lost data) 
-
- | No guarantee (Data can be lost permanently) |
-| **Packet Order** | Guaranteed in-order arrival 
-
- | Packets can arrive completely out of order |
-| **Speed & Overhead** | Slower (Thick header, flow & error control) 
-
- | Extremely fast (Tiny header, zero control mechanisms) |
-| **Data Unit** | Segment 
-
- | Datagram |
-| **Usage** | Web browsing, email, file transfers 
-
- | Live video streaming, online gaming, VoIP calls |
+| **Reliability** | Guaranteed delivery (Retransmits lost data) | No guarantee (Data can be lost permanently) |
+| **Packet Order** | Guaranteed in-order arrival | Packets can arrive completely out of order |
+| **Speed & Overhead** | Slower (Thick header, flow & error control) | Extremely fast (Tiny header, zero control mechanisms) |
+| **Data Unit** | Segment | Datagram |
+| **Usage** | Web browsing, email, file transfers | Live video streaming, online gaming, VoIP calls |
 
 ---
 
@@ -781,8 +692,7 @@ Both **TCP (Transmission Control Protocol)** and **UDP (User Datagram Protocol)*
 #### TCP (The Perfectionist)
 
 * **Why:** Used when data integrity is critical. If an app loses a single piece of data during a file download, the entire file corrupts.
-* 
-**How:** Before sending anything, TCP forces the sender and receiver to log into a session via a **Three-Way Handshake**. It numbers every packet , tracks acknowledgments from the receiver, and automatically retransmits any data packet that goes missing in transit.
+* **How:** Before sending anything, TCP forces the sender and receiver to log into a session via a **Three-Way Handshake**. It numbers every packet , tracks acknowledgments from the receiver, and automatically retransmits any data packet that goes missing in transit.
 
 
 
@@ -795,12 +705,10 @@ Both **TCP (Transmission Control Protocol)** and **UDP (User Datagram Protocol)*
 
 ### Where They Are Used
 
-* 
-**TCP:** Behind protocols like **HTTP/HTTPS** (loading web pages) , **SMTP** (sending emails) , and **SSH/FTP** (securely moving corporate files).
+* **TCP:** Behind protocols like **HTTP/HTTPS** (loading web pages) , **SMTP** (sending emails) , and **SSH/FTP** (securely moving corporate files).
 
 
-* 
-**UDP:** Powers **DNS queries**, **VoIP services** (like WhatsApp or Zoom calls), multiplayer live gaming (where low latency is life), and live sports streams.
+* **UDP:** Powers **DNS queries**, **VoIP services** (like WhatsApp or Zoom calls), multiplayer live gaming (where low latency is life), and live sports streams.
 
 
 
@@ -922,12 +830,10 @@ Imagine you are inside a crowded corporate office room and need to give a folder
 
 IPv4 and IPv6 are the two versions of the Internet Protocol (IP) used to route data across the global Internet.
 
-* 
-**IPv4 (Internet Protocol version 4):** The legacy protocol deployed in the early days of the internet.
+* **IPv4 (Internet Protocol version 4):** The legacy protocol deployed in the early days of the internet.
 
 
-* 
-**IPv6 (Internet Protocol version 6):** The modern upgrade built specifically to replace IPv4.
+* **IPv6 (Internet Protocol version 6):** The modern upgrade built specifically to replace IPv4.
 
 
 
@@ -937,20 +843,10 @@ IPv4 and IPv6 are the two versions of the Internet Protocol (IP) used to route d
 
 | Feature | IPv4 | IPv6 |
 | --- | --- | --- |
-| **Address Size** | 32 bits 
-
- | 128 bits 
-
- |
-| **Format** | Dotted Decimal (e.g., `192.168.1.1`) 
-
- | Hexadecimal with Colons (e.g., `2001:db8::1`) 
-
- |
+| **Address Size** | 32 bits | 128 bits |
+| **Format** | Dotted Decimal (e.g., `192.168.1.1`) | Hexadecimal with Colons (e.g., `2001:db8::1`) |
 | **Total Address Pool** | $\approx 4.3 \times 10^9$ (4.3 Billion) | $\approx 3.4 \times 10^{38}$ (Virtually Infinite) |
-| **Configuration** | Manual or via DHCP 
-
- | Stateless Address Autoconfiguration (SLAAC) or DHCPv6 |
+| **Configuration** | Manual or via DHCP | Stateless Address Autoconfiguration (SLAAC) or DHCPv6 |
 | **Security (IPsec)** | Optional (Add-on feature) | Built-in by design (Mandatory in specification) |
 | **Header Size** | Variable (20 to 60 bytes) | Fixed (40 bytes) |
 
@@ -977,8 +873,7 @@ IPv6 uses a 128-bit structure, creating $340 \text{ undecillion}$ unique address
 
 Think of the telephone numbering system in a rapidly expanding country:
 
-* 
-**The IPv4 Way:** A small town uses a **7-digit phone number system** (e.g., `555-0199`). It works beautifully until thousands of new residents move in and buy lines. Suddenly, the town runs out of numbers, and no one else can set up a phone line.
+* **The IPv4 Way:** A small town uses a **7-digit phone number system** (e.g., `555-0199`). It works beautifully until thousands of new residents move in and buy lines. Suddenly, the town runs out of numbers, and no one else can set up a phone line.
 
 
 * **The IPv6 Way:** The telecommunications agency updates the system to a **15-digit code including area codes**. It gives everyone an enormous combination space, ensuring the town will never run out of numbers again, even if the population grows a billion-fold.
@@ -995,8 +890,7 @@ A subnet mask (like `255.255.255.0`) tells network hardware which portion of an 
 
 ### Why We Use It
 
-* 
-**Limits Broadcast Traffic:** Devices naturally broadcast traffic locally. In a massive network with thousands of computers, broadcast storms would consume all available bandwidth. Subnetting isolates this traffic inside individual subnets.
+* **Limits Broadcast Traffic:** Devices naturally broadcast traffic locally. In a massive network with thousands of computers, broadcast storms would consume all available bandwidth. Subnetting isolates this traffic inside individual subnets.
 
 
 * **Enhances Security:** It allows network administrators to segregate sensitive departments. For instance, you can prevent devices in a guest Wi-Fi subnet from routing traffic to private payroll servers.
@@ -1089,16 +983,13 @@ Think of land allocation in a rapidly expanding town:
 
 Hubs, switches, and routers are physical hardware devices used to connect equipment on a network, but they operate at entirely different layers of the OSI model and possess drastically different levels of intelligence:
 
-* 
-**Hub:** A legacy, non-intelligent Layer 1 (Physical Layer) device that blindly duplicates incoming electrical data to all connected physical ports.
+* **Hub:** A legacy, non-intelligent Layer 1 (Physical Layer) device that blindly duplicates incoming electrical data to all connected physical ports.
 
 
-* 
-**Switch:** An intelligent Layer 2 (Data Link Layer) device that forwards data frames selectively to specific devices on the *same* local network (LAN).
+* **Switch:** An intelligent Layer 2 (Data Link Layer) device that forwards data frames selectively to specific devices on the *same* local network (LAN).
 
 
-* 
-**Router:** A highly intelligent Layer 3 (Network Layer) device that maps data pathways to forward packets *between* completely separate networks.
+* **Router:** A highly intelligent Layer 3 (Network Layer) device that maps data pathways to forward packets *between* completely separate networks.
 
 
 
@@ -1108,34 +999,12 @@ Hubs, switches, and routers are physical hardware devices used to connect equipm
 
 | Feature | Hub | Switch | Router |
 | --- | --- | --- | --- |
-| **OSI Layer** | Layer 1 (Physical) 
-
- | Layer 2 (Data Link) 
-
- | Layer 3 (Network) 
-
- |
-| **Data Unit** | Electrical Bits 
-
- | Frames 
-
- | Packets 
-
- |
-| **Addressing Used** | None (Blind duplication) | MAC Addresses 
-
- | IP Addresses 
-
- |
+| **OSI Layer** | Layer 1 (Physical) | Layer 2 (Data Link) | Layer 3 (Network) |
+| **Data Unit** | Electrical Bits | Frames | Packets |
+| **Addressing Used** | None (Blind duplication) | MAC Addresses | IP Addresses |
 | **Transmission Type** | Half-Duplex (One talker at a time) | Full-Duplex (Simultaneous talk/receive) | Full-Duplex |
-| **Traffic Scope** | Shared Collision Domain | Separate Collision Domains per port | Connects separate Broadcast Domains 
-
- |
-| **Table Maintained** | None | MAC Address Table 
-
- | Routing Table 
-
- |
+| **Traffic Scope** | Shared Collision Domain | Separate Collision Domains per port | Connects separate Broadcast Domains |
+| **Table Maintained** | None | MAC Address Table | Routing Table |
 
 ---
 
@@ -1745,20 +1614,10 @@ Routers rely on two primary methods to build their routing tables and make packe
 
 | Feature | Static Routing | Dynamic Routing |
 | --- | --- | --- |
-| **Configuration** | Manual by a network engineer 
-
- | Automated via routing protocols 
-
- |
-| **Adaptability** | Rigid; cannot automatically detour around failures 
-
- | Highly adaptive; reroutes traffic around failures in real time 
-
- |
+| **Configuration** | Manual by a network engineer | Automated via routing protocols |
+| **Adaptability** | Rigid; cannot automatically detour around failures | Highly adaptive; reroutes traffic around failures in real time |
 | **Computational Overhead** | None; extremely lightweight on system memory | High; requires ongoing CPU cycles to process routing updates |
-| **Scalability** | Poor; difficult to manage as the network grows | Excellent; handles massive, growing enterprise networks easily 
-
- |
+| **Scalability** | Poor; difficult to manage as the network grows | Excellent; handles massive, growing enterprise networks easily |
 | **Security** | Highly secure (no path update messages are exchanged) | Less secure by default (requires protocol authentication) |
 | **Common Protocols** | None (Uses explicit `ip route` commands) | OSPF, BGP, EIGRP, RIP |
 
