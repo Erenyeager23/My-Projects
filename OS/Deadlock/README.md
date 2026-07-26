@@ -300,10 +300,6 @@ Request denied.
 
 # Banker's Algorithm
 
-Developed by:
-
-:contentReference[oaicite:0]{index=0}
-
 Purpose:
 
 Avoid deadlocks.
